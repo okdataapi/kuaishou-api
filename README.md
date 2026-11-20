@@ -10,14 +10,14 @@
 
 | 接口 | 说明 | 价格 | 路径 |
 |---|---|---|---|
-| [快手视频搜索](https://okdata.online/zh/apis/kuaishou/videos/search/) | 按关键词搜视频，可按最新或最多点赞排，可按发布时间和时长筛选：文案、作者、播放、点赞、评论和分享。 | $0.02 / 次 | `GET /v1/kuaishou/videos/search` |
-| [快手作品详情](https://okdata.online/zh/apis/kuaishou/videos/get/) | 按 ID 或链接（v.kuaishou.com 短链也行）取一个作品：文案、作者、播放、点赞、评论和分享。 | $0.002 / 次 | `GET /v1/kuaishou/videos/get` |
-| [快手作品评论](https://okdata.online/zh/apis/kuaishou/videos/comments/list/) | 作品的一级评论，从新到旧：内容、评论者、点赞、发布时间和 IP 属地。 | $0.002 / 次 | `GET /v1/kuaishou/videos/comments/list` |
-| [快手评论回复](https://okdata.online/zh/apis/kuaishou/comments/replies/list/) | 按评论 ID 和所在作品 ID 取一级评论下的回复：内容、回复者、点赞、发布时间和 IP 属地。 | $0.002 / 次 | `GET /v1/kuaishou/comments/replies/list` |
-| [快手账号信息](https://okdata.online/zh/apis/kuaishou/users/get/) | 按用户 ID 取账号：名称、快手号、简介、粉丝、关注、作品数、获赞总数、认证和 IP 属地。 | $0.02 / 次 | `GET /v1/kuaishou/users/get` |
-| [快手账号搜索](https://okdata.online/zh/apis/kuaishou/users/search/) | 按关键词找账号，可只要认证账号或正在直播的，可按性别筛选或按粉丝数排：用户 ID、名称、快手号、简介、粉丝数和认证。 | $0.02 / 次 | `GET /v1/kuaishou/users/search` |
-| [快手账号作品](https://okdata.online/zh/apis/kuaishou/users/videos/list/) | 账号发布的作品，按最新或最热排：文案、播放、点赞、评论和发布时间。 | $0.02 / 次 | `GET /v1/kuaishou/users/videos/list` |
-| [快手热榜](https://okdata.online/zh/apis/kuaishou/trends/list/) | 快手热榜：50 个热点和置顶的一条，带热度。 | $0.002 / 次 | `GET /v1/kuaishou/trends/list` |
+| [快手视频搜索](https://okdata.online/zh/apis/kuaishou/videos/search/?src=gh-kuaishou-api) | 按关键词搜视频，可按最新或最多点赞排，可按发布时间和时长筛选：文案、作者、播放、点赞、评论和分享。 | $0.02 / 次 | `GET /v1/kuaishou/videos/search` |
+| [快手作品详情](https://okdata.online/zh/apis/kuaishou/videos/get/?src=gh-kuaishou-api) | 按 ID 或链接（v.kuaishou.com 短链也行）取一个作品：文案、作者、播放、点赞、评论和分享。 | $0.002 / 次 | `GET /v1/kuaishou/videos/get` |
+| [快手作品评论](https://okdata.online/zh/apis/kuaishou/videos/comments/list/?src=gh-kuaishou-api) | 作品的一级评论，从新到旧：内容、评论者、点赞、发布时间和 IP 属地。 | $0.002 / 次 | `GET /v1/kuaishou/videos/comments/list` |
+| [快手评论回复](https://okdata.online/zh/apis/kuaishou/comments/replies/list/?src=gh-kuaishou-api) | 按评论 ID 和所在作品 ID 取一级评论下的回复：内容、回复者、点赞、发布时间和 IP 属地。 | $0.002 / 次 | `GET /v1/kuaishou/comments/replies/list` |
+| [快手账号信息](https://okdata.online/zh/apis/kuaishou/users/get/?src=gh-kuaishou-api) | 按用户 ID 取账号：名称、快手号、简介、粉丝、关注、作品数、获赞总数、认证和 IP 属地。 | $0.02 / 次 | `GET /v1/kuaishou/users/get` |
+| [快手账号搜索](https://okdata.online/zh/apis/kuaishou/users/search/?src=gh-kuaishou-api) | 按关键词找账号，可只要认证账号或正在直播的，可按性别筛选或按粉丝数排：用户 ID、名称、快手号、简介、粉丝数和认证。 | $0.02 / 次 | `GET /v1/kuaishou/users/search` |
+| [快手账号作品](https://okdata.online/zh/apis/kuaishou/users/videos/list/?src=gh-kuaishou-api) | 账号发布的作品，按最新或最热排：文案、播放、点赞、评论和发布时间。 | $0.02 / 次 | `GET /v1/kuaishou/users/videos/list` |
+| [快手热榜](https://okdata.online/zh/apis/kuaishou/trends/list/?src=gh-kuaishou-api) | 快手热榜：50 个热点和置顶的一条，带热度。 | $0.002 / 次 | `GET /v1/kuaishou/trends/list` |
 
 ## 快速开始
 
@@ -64,17 +64,17 @@ Cursor、Cherry Studio、WorkBuddy 等支持远程 MCP 的客户端：
 
 **要登录平台账号吗？** 不用。数据是公开内容，okdata 在服务端获取，你的账号完全不参与。
 
-**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。新账号送 $0.1 试用额度，之后 $10 起充，余额不过期，没有订阅。价格页：https://okdata.online/zh/pricing/ ，计费说明：https://okdata.online/zh/docs/billing/
+**怎么收费？** 每个接口单独定价，表里写的就是一次调用的价格；按条计费的接口按实际返回条数算。新账号送 $0.1 试用额度，之后 $10 起充，余额不过期，没有订阅。价格页：https://okdata.online/zh/pricing/?src=gh-kuaishou-api ，计费说明：https://okdata.online/zh/docs/billing/?src=gh-kuaishou-api
 
 **和官方开放平台有什么区别？** 官方开放平台只能读授权给你的账号自己的数据，而且要企业资质和审核；这里是平台上任何人都能看到的公开数据，比如搜索结果、别人的笔记或视频、评论、热榜。
 
 **能翻页吗？** 列表接口每页一次调用，把 `page.next_cursor` 原样传回 `cursor` 就是下一页，24 小时内有效。
 
-**出错了怎么办？** 每个错误都有固定的 `code`、中文说明 `message_zh`，以及会不会扣费（`charged`）和要不要重试（`retry`）。全部错误码：https://okdata.online/zh/docs/errors/
+**出错了怎么办？** 每个错误都有固定的 `code`、中文说明 `message_zh`，以及会不会扣费（`charged`）和要不要重试（`retry`）。全部错误码：https://okdata.online/zh/docs/errors/?src=gh-kuaishou-api
 
 ## English
 
-Examples for the okdata Kuaishou API: 8 live endpoints behind one API key, pay per call from $0.002, no platform login or cookies. Sign up at https://okdata.online/signup/?src=gh-kuaishou-api, docs at https://okdata.online/apis/, MCP at https://okdata.online/mcp/.
+Examples for the okdata Kuaishou API: 8 live endpoints behind one API key, pay per call from $0.002, no platform login or cookies. Sign up at https://okdata.online/signup/?src=gh-kuaishou-api, docs at https://okdata.online/apis/?src=gh-kuaishou-api, MCP at https://okdata.online/mcp/?src=gh-kuaishou-api.
 
 ## License
 
