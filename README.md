@@ -35,6 +35,26 @@ Python 版在 [examples/quickstart.py](examples/quickstart.py)（只用标准库
 
 返回统一的结构：列表在 `data.items`，下一页用 `page.next_cursor` 传回 `cursor`，这次扣了多少钱在 `meta.billing.amount`，平台不提供的字段为 null 并在 `meta.unavailable` 里写明原因。
 
+快手热榜不用翻页，一条命令取 51 条：
+
+```bash
+curl -G "https://api.okdata.online/v1/kuaishou/trends/list" \
+  -H "Authorization: Bearer $OKDATA_API_KEY"
+```
+
+### 真实输出（2026-11-24 实跑）
+
+上面这条命令当天取回 51 条，前三条是：
+
+```console
+1  全球之治　　　　　　　　　　　　  13,081,994
+2  神舟二十四号航天员记者见面会　　  13,080,049
+3  U17国足2比2憾平摩洛哥U17  13,075,837
+花费 $0.002
+```
+
+完整响应在 [examples/kuaishou.trends.list.json](examples/kuaishou.trends.list.json)（51 条，含每条的 `rank`、`name`、`heat` 和快手搜索链接）。榜单会变，以你调用时为准。
+
 ## 让 AI 直接用（MCP）
 
 Claude Code：
